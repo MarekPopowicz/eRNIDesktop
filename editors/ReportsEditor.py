@@ -245,6 +245,10 @@ class ReportsEditor(QDialog, ui.report_editor.Ui_Form):
                     td = item[1].replace('Dz. nr', '◉ Dz. nr ')
                     td = td.replace(';', '<br>')
                     table.append(f'<td>{td}</td>\n')
+                elif item[0] == 'Protokoły' or item[0] == 'Protokół':
+                    td = item[1].replace('Nr ', '◉ Nr ')
+                    td = td.replace(';', '<br>')
+                    table.append(f'<td>{td}</td>\n')
                 elif item[0] == 'OT' or item[0] == 'Regulacja':
                     td = item[1].replace(';', '<br>')
                     table.append(f'<td>{td}</td>\n')
